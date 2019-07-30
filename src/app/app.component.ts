@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'voizfonica';
+  title = 'profile-app';
+  
+  constructor(private router:Router) { 
+  
+ 
+  //currenturl=this.router.url;
+}
+
+
+  
+fun()
+{
+ const curl=this.router.url;
+  const ul=curl.split('/');
+  console.log(ul);
+  
+  if(ul[1] != ""){
+    console.log('1');
+    
+  return false;
+  }else{
+    console.log('2');
+    return true;
+  }
+}
+
 }
